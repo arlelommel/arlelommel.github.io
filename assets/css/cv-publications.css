@@ -1,0 +1,26 @@
+/* CV/publications page-specific styles. All selectors are prefixed cv_. */
+.cv_page-intro { padding-block: clamp(3.5rem, 7vw, 6rem); border-bottom: var(--rule-standard); }
+.cv_page-intro h1 { max-width: none; margin-bottom: 1rem; }
+.cv_page-intro .lede { max-width: 52rem; }
+.cv_controls { display: grid; grid-template-columns: minmax(14rem, 1fr) auto; gap: 1rem; align-items: end; margin: 2.5rem 0 1.5rem; }
+.cv_search-group label, .cv_filter-label { display:block; margin-bottom:.45rem; font-family:var(--sans); font-size:.72rem; font-weight:700; letter-spacing:.09em; text-transform:uppercase; color:var(--text-secondary); }
+.cv_search { width:100%; padding:.7rem .8rem; border:var(--rule-standard); background:var(--background); color:var(--text-primary); font:inherit; }
+.cv_filters { display:flex; flex-wrap:wrap; gap:.45rem; }
+.cv_filter { appearance:none; border:var(--rule-standard); background:transparent; color:var(--text-secondary); padding:.55rem .7rem; font-family:var(--sans); font-size:.78rem; cursor:pointer; }
+.cv_filter[aria-pressed="true"] { background:var(--accent); border-color:var(--accent); color:var(--background); }
+.cv_status { margin:0 0 1.5rem; color:var(--text-secondary); font-family:var(--sans); font-size:.8rem; }
+.cv_year { display:grid; grid-template-columns:6rem minmax(0,1fr); gap:2rem; padding:2rem 0; border-top:var(--rule-standard); }
+.cv_year-heading { margin:0; font-size:1.7rem; line-height:1.2; }
+.cv_entries { min-width:0; }
+.cv_item { padding:0 0 1.6rem; }
+.cv_item + .cv_item { padding-top:1.6rem; border-top:var(--rule-standard); }
+.cv_item-title { margin:0 0 .35rem; font-size:1.35rem; line-height:1.25; }
+.cv_item-title a { color:var(--text-primary); text-decoration:none; }
+.cv_item-title a:hover, .cv_item-title a:focus-visible { color:var(--accent); }
+.cv_meta { margin:0; color:var(--text-secondary); font-family:var(--sans); font-size:.78rem; line-height:1.45; }
+.cv_citation { margin:.55rem 0 0; color:var(--text-secondary); font-size:1rem; }
+.cv_abstract { margin-top:.7rem; }
+.cv_abstract summary { width:max-content; color:var(--accent); font-family:var(--sans); font-size:.8rem; font-weight:650; cursor:pointer; }
+.cv_abstract p { max-width:var(--measure); margin:.75rem 0 0; }
+.cv_empty { padding:3rem 0; border-top:var(--rule-standard); color:var(--text-secondary); }
+@media (max-width:800px) { .cv_controls { grid-template-columns:1fr; } .cv_year { grid-template-columns:1fr; gap:1rem; } }
