@@ -492,3 +492,19 @@ h3 {
     font-size: 1.15rem;
   }
 }
+
+/* Styling for navigation marking */
+.site-nav a {
+	position: relative;
+}
+
+.site-nav a.active::after,
+.site-nav a[aria-current="page"]::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -0.35rem;
+	height: 1px;
+	background: var(--accent);
+}
