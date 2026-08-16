@@ -1,0 +1,283 @@
+/* ----------------------------------------------------------------------
+   Standards page
+   Page-specific rules are kept here for easy iteration.
+   ---------------------------------------------------------------------- */
+
+.standards-masthead {
+	padding-block: clamp(4.5rem, 9vw, 7.5rem) 2.75rem;
+}
+
+.standards-masthead-copy {
+	max-width: 52rem;
+}
+
+.standards-masthead h1 {
+	max-width: none;
+	margin-bottom: 1.25rem;
+}
+
+.standards-intro {
+	max-width: 46rem;
+	margin: 0;
+	color: var(--text-secondary);
+	font-size: clamp(1.25rem, 2vw, 1.55rem);
+	line-height: 1.45;
+}
+
+.standards-section-nav {
+	border-top: var(--rule-standard);
+	border-bottom: var(--rule-standard);
+}
+
+.standards-section-nav ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0;
+	list-style: none;
+}
+
+.standards-section-nav li {
+	margin: 0;
+}
+
+.standards-section-nav a {
+	display: block;
+	padding: 1rem 1.5rem 1rem 0;
+	color: var(--text-secondary);
+	font-family: var(--sans);
+	font-size: 0.83rem;
+	font-weight: 650;
+	letter-spacing: 0.02em;
+	text-decoration: none;
+}
+
+.standards-section-nav li + li a {
+	padding-left: 1.5rem;
+	border-left: var(--rule-standard);
+}
+
+.standards-section-nav a:hover,
+.standards-section-nav a:focus-visible {
+	color: var(--accent);
+}
+
+.standards-block {
+	padding-block: clamp(4rem, 8vw, 6.5rem);
+	scroll-margin-top: 2rem;
+}
+
+.standards-block + .standards-block {
+	border-top: var(--rule-standard);
+}
+
+.standards-block-head {
+	display: grid;
+	grid-template-columns: minmax(12rem, 0.72fr) minmax(0, 1.28fr);
+	gap: clamp(2.5rem, 7vw, 6rem);
+	align-items: start;
+	margin-bottom: 3.25rem;
+}
+
+.standards-block-head h2 {
+	margin-bottom: 0;
+}
+
+.standards-block-head p {
+	max-width: 42rem;
+	margin: 0;
+	color: var(--text-secondary);
+	font-size: 1.2rem;
+	line-height: 1.5;
+}
+
+.standards-entry {
+	display: grid;
+	grid-template-columns: minmax(12rem, 0.72fr) minmax(0, 1.28fr);
+	gap: clamp(2.5rem, 7vw, 6rem);
+	padding-block: 2.5rem;
+	border-top: var(--rule-standard);
+}
+
+.standards-entry h3 {
+	margin-bottom: 0.35rem;
+	font-size: 1.55rem;
+}
+
+.standards-entry-label {
+	margin: 0;
+	color: var(--text-secondary);
+	font-family: var(--sans);
+	font-size: 0.76rem;
+	font-weight: 650;
+	letter-spacing: 0.06em;
+	line-height: 1.35;
+	text-transform: uppercase;
+}
+
+.standards-entry-body {
+	max-width: var(--measure);
+}
+
+.standards-entry-body p {
+	margin-top: 0;
+}
+
+.standards-entry-body p + p {
+	margin-top: 1.15rem;
+}
+
+.standards-entry-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0;
+	margin-top: 2.75rem;
+	border-top: var(--rule-standard);
+	border-bottom: var(--rule-standard);
+}
+
+.standards-entry-item {
+	padding: 2rem 2.5rem 2.25rem 0;
+}
+
+.standards-entry-item:nth-child(odd) {
+	padding-right: 3rem;
+	border-right: var(--rule-standard);
+}
+
+.standards-entry-item:nth-child(even) {
+	padding-left: 3rem;
+}
+
+.standards-entry-item:nth-child(n + 3) {
+	border-top: var(--rule-standard);
+}
+
+.standards-entry-item h3 {
+	margin-bottom: 0.3rem;
+}
+
+.standards-entry-item .standards-entry-label {
+	margin-bottom: 1rem;
+}
+
+.standards-entry-item p {
+	margin: 0;
+	color: var(--text-secondary);
+}
+
+.standards-note {
+	margin-top: 2.75rem;
+	max-width: var(--measure);
+	padding-left: 1.25rem;
+	border-left: 2px solid var(--rule);
+	color: var(--text-secondary);
+}
+
+@media (max-width: 800px) {
+	.standards-block-head,
+	.standards-entry {
+		grid-template-columns: 1fr;
+		gap: 1.25rem;
+	}
+
+	.standards-entry-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.standards-entry-item,
+	.standards-entry-item:nth-child(odd),
+	.standards-entry-item:nth-child(even) {
+		padding: 1.75rem 0 2rem;
+		border-right: 0;
+	}
+
+	.standards-entry-item:nth-child(n + 2) {
+		border-top: var(--rule-standard);
+	}
+}
+
+@media (max-width: 620px) {
+	.standards-section-nav ul {
+		display: block;
+	}
+
+	.standards-section-nav a,
+	.standards-section-nav li + li a {
+		padding: 0.8rem 0;
+		border-left: 0;
+	}
+
+	.standards-section-nav li + li {
+		border-top: var(--rule-standard);
+	}
+}
+
+/* --------------------------------------------------------------------------
+   Standards entry headers and historical logos
+   -------------------------------------------------------------------------- */
+
+.standards-entry-header {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	gap: 1.25rem;
+	align-items: start;
+	margin-bottom: 1rem;
+}
+
+.standards-entry-header h3 {
+	margin-bottom: 0.2rem;
+}
+
+.standards-entry-label {
+	margin: 0;
+	color: var(--text-secondary);
+	font-family: var(--sans);
+	font-size: 0.78rem;
+	font-weight: 650;
+	letter-spacing: 0.04em;
+	line-height: 1.35;
+	text-transform: uppercase;
+}
+
+.standards-entry-logo {
+	justify-self: end;
+	align-self: start;
+	display: block;
+	width: auto;
+	height: auto;
+	max-width: 8rem;
+	max-height: 3.4rem;
+	image-rendering: auto;
+}
+
+/*
+  The source logos have different intrinsic proportions.
+  Preserve those proportions rather than forcing them into
+  identical dimensions.
+*/
+.standards-entry-logo--wide {
+	max-width: 8.5rem;
+}
+
+.standards-entry-logo--compact {
+	max-width: 7rem;
+}
+
+/* On narrow screens, keep the logo subordinate to the text. */
+@media (max-width: 520px) {
+	.standards-entry-header {
+		grid-template-columns: minmax(0, 1fr) auto;
+		gap: 0.8rem;
+	}
+
+	.standards-entry-logo {
+		max-width: 6.5rem;
+		max-height: 2.8rem;
+	}
+}
+
+#foundational-standards {
+	padding-bottom: 0;
+}
