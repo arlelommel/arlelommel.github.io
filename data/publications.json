@@ -5904,6 +5904,23 @@
 			"citation": "Lommel, Arle. 2017. Glossary of standards terms. <em>The language of localization</em>, ed. by Katherine Brown-Hoekstra, 137–42. Laguna Hills CA: XML Press",
 			"visible": true,
 			"provenance": "manual"
+		},
+		{
+			"id": "blues-for-bleu",
+			"doi": null,
+			"title": "Blues for BLEU: Reconsidering the validity of reference-based MT evaluation",
+			"subtitle": null,
+			"display_title": "Blues for BLEU: Reconsidering the validity of reference-based MT evaluation",
+			"type": "peer-reviewed",
+			"source": null,
+			"authors": "Dr. Arle Lommel",
+			"date": null,
+			"year": 2016,
+			"abstract": null,
+			"url": null,
+			"citation": "Lommel, Arle. 2016. Blues for BLEU: Reconsidering the validity of reference-based MT evaluation. <em>Proceedings of the lrec 2016 Workshop “Translation Evaluation – From Fragmented Tools and Data Sets to an Integrated Ecosystem”</em>, ed. by Georg Rehm, Aljoscha Burchardt et al.",
+			"visible": true,
+			"provenance": "manual"
 		}
 
 	]
