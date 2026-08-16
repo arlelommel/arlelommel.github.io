@@ -23,7 +23,15 @@ function markActiveNavigation() {
 	document.querySelectorAll('.site-nav a[data-section]').forEach(link => {
 		const section = link.dataset.section;
 
-		if (path.startsWith(`/${section}/`)) {
+		const isMainPage =
+			section === 'main' &&
+			(path === '/' || path === '/index.html');
+
+		const isSectionPage =
+			section !== 'main' &&
+			path.startsWith(`/${section}/`);
+
+		if (isMainPage || isSectionPage) {
 			link.classList.add('active');
 			link.setAttribute('aria-current', 'page');
 		}
