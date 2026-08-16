@@ -3,40 +3,57 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Publications, standards, webinars, presentations, and other research outputs by Arle Lommel.">
-	<title>Research Record | Arle Lommel</title>
+	<meta name="description" content="Selected and complete publications by Arle Lommel.">
+	<title>Publications | Arle Lommel</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="/assets/css/style.css">
-	<link rel="stylesheet" href="/assets/css/cv-publications.css">
+	<link rel="stylesheet" href="/assets/css/publications.css">
 </head>
 <body>
 	<div id="site-header"></div>
-	<main class="shell">
-		<header class="cv_page-intro">
-			<p class="eyebrow">Research record</p>
-			<h1>Publications &amp; presentations</h1>
-			<p class="lede">Research reports, peer-reviewed work, standards, webinars, presentations, and other selected outputs.</p>
-			<div class="cv_controls">
-				<div class="cv_search-group"><label for="cv_search">Search</label><input class="cv_search" id="cv_search" type="search" placeholder="Title, author, topic, or keyword"></div>
-				<div><span class="cv_filter-label">Format</span><div class="cv_filters" role="group" aria-label="Filter by format">
-					<button class="cv_filter" data-type="all" aria-pressed="false">All</button>
-					<button class="cv_filter" data-type="csa-report" aria-pressed="true">CSA Research</button>
-					<button class="cv_filter" data-type="peer-reviewed" aria-pressed="false">Peer-Reviewed Articles</button>
-					<button class="cv_filter" data-type="editorship" aria-pressed="false">Editorships</button>
-					<button class="cv_filter" data-type="webinar" aria-pressed="false">Webinars</button>
-					<button class="cv_filter" data-type="standard" aria-pressed="false">Standards</button>
-					<button class="cv_filter" data-type="book-chapter" aria-pressed="false">Chapters</button>
-					<button class="cv_filter" data-type="review" aria-pressed="false">Reviews</button>
-					<button class="cv_filter" data-type="translation" aria-pressed="false">Translations</button>
-					<button class="cv_filter" data-type="presentation" aria-pressed="false">Academic Presentations</button>
-					<button class="cv_filter" data-type="dataset" aria-pressed="false">Datasets</button>
-				</div></div>
-			</div>
-			<p class="cv_status" id="cv_status" aria-live="polite"></p>
+
+	<main>
+		<header class="pub_masthead shell">
+			<p class="eyebrow">Publications</p>
+			<h1>Research, analysis, and scholarly work.</h1>
+			<p class="pub_intro">
+				Selected work highlights publications that are particularly representative of my research and professional interests. The complete record can be searched and filtered by publication type.
+			</p>
 		</header>
-		<div id="cv_publications"><p class="cv_empty">Loading research record…</p></div>
+
+		<section class="pub_publications shell" aria-labelledby="pub_publications-heading">
+			<h2 class="pub_visually-hidden" id="pub_publications-heading">Publication list</h2>
+
+			<div class="pub_mode-switch" role="group" aria-label="Publication view">
+				<button class="pub_mode-button is-active" type="button" data-mode="selected" aria-pressed="true">Selected</button>
+				<button class="pub_mode-button" type="button" data-mode="all" aria-pressed="false">All publications</button>
+			</div>
+
+			<div class="pub_all-controls" id="pub_all-controls" hidden>
+				<div class="pub_search-wrap">
+					<label for="pub_search">Search publications</label>
+					<input id="pub_search" type="search" autocomplete="off" placeholder="Search titles, authors, abstracts, and citations">
+				</div>
+
+				<div class="pub_filter-wrap">
+					<p class="pub_control-label">Filter by type</p>
+					<div class="pub_filters" id="pub_filters" role="group" aria-label="Publication type filters"></div>
+				</div>
+			</div>
+
+			<p class="pub_status" id="pub_status" aria-live="polite"></p>
+			<div class="pub_results" id="pub_results"></div>
+
+			<p class="pub_selected-footer" id="pub_selected-footer">
+				<button class="pub_all-link" type="button" data-switch-to-all>See all publications <span aria-hidden="true">→</span></button>
+			</p>
+		</section>
 	</main>
+
 	<div id="site-footer"></div>
-	<script src="/assets/js/cv-publications.js"></script>
 	<script src="/assets/js/includes.js"></script>
+	<script src="/assets/js/publications.js"></script>
 </body>
 </html>

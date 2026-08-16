@@ -132,7 +132,9 @@
 			"abstract": "Artificial intelligence is reshaping multilingual communication, but the central question is no longer whether AI will participate: it already does. The challenge is determining where expertise, judgment, governance, and accountability should reside. This report presents CSA Research’s vision of “Human at the Core, AI in the Loop,” arguing that AI should augment and extend human capability rather than replace it, with professionals defining objectives, exercising judgment, and remaining accountable while AI supports those goals. The report explores what this shift means for language and global content providers, enterprise buyers, technology developers, and professional linguists, and provides a practical framework for designing workflows and strategies that combine AI scale with human expertise to deliver outcomes that machines alone cannot achieve.",
 			"url": "https://insights.csa-research.com/aim/en/reports/305013858",
 			"visible": true,
-			"provenance": "csa_reports.xlsx"
+			"provenance": "csa_reports.xlsx",
+			"preferred_order": 1,
+			"significance": "<p>This piece is the latest iteration of a long-term project to reconceptualize human-machine interaction for language services. The first version – from 2016 – introduced the concept of <strong>augmented translation</strong>, an approach that surrounded the human language expert with just-in-time delivery of relevant information, leveraging improved contextual translation memory (or text memory), adaptive machine translation, proactive AI-enabled terminology discovery and management, and automated content enrichment. These technologies would support the experts, but leave them in charge. Behind the scenes a translation management system and quality estimation would be the glue that holds them together</p><p>This framework has evolved along with technology, and starting in 2025 CSA Reserach began calling it <strong>Human at the Core / AI in the Loop</strong> to emphasize its distinctiveness from post-editing and “human in the loop” approaches that relegate the language expert to merely cleaning up AI slop. Industry discussion around this paradigm has been fruitful in highlighting the challenging question of what role human experts will play in the face of rapidly improving AI. CSA Research emphasizes that this approach enables human experts to provide governance and risk management rather than leaving them in the “moral crumple zone” where they are there to absorb blame for outcomes they had no control over or say in creating.</p>"
 		},
 		{
 			"id": "csa-2026-monthly-discussion-session-on-ai-in-language-services-june-2026",
@@ -1689,9 +1691,9 @@
 		{
 			"id": "csa-2023-Post-Localization-era",
 			"doi": null,
-			"title": "The Post-Localization era",
+			"title": "The Post-Localization Era",
 			"subtitle": "How the decline of traditional localization can deliver major gains for the language services sector",
-			"display_title": "The Post-Localization era: How the decline of traditional localization can deliver major gains for the language services sector",
+			"display_title": "The Post-Localization Era: How the decline of traditional localization can deliver major gains for the language services sector",
 			"type": "csa-report",
 			"source": "CSA Research",
 			"authors": "Dr. Arle Lommel, Donald A. DePalma",
@@ -1700,7 +1702,9 @@
 			"abstract": "Growth in the language sector has slowed dramatically, driven in part by increasingly capable machine translation and artificial intelligence. This shift to machine processes reflects the long-term ongoing process of digital transformation and the shift from localization as a distinct process to globalization of the entire business and its assets. This change marks the start of what CSA Research calls the “Post-Localization Era.” In this period, the human-driven offerings of translation and localization will decline in importance in favor of a wide constellation of international content services that serve cross-functional business globalization. LSPs and enterprise language services groups that embrace this change will find that – by giving up traditional localization – they will be able to continue to grow and demonstrate strategic relevance.",
 			"url": "https://insights.csa-research.com/aim/en/reports/305013568",
 			"visible": true,
-			"provenance": "csa_reports.xlsx"
+			"provenance": "csa_reports.xlsx",
+			"preferred_order": 2,
+			"significance": "<p>I came up with the concept of the <strong>Post-Localization Era</strong>, together with Don DePalma, in 2020 to describe a fundamental shift that occurred in the language services sector starting in 2019. At that time, neural machine translation (later partially replaced by LLMs) began an erosion of transactional sales of bulk, commoditized human translation that, by 2026, had decreased revenue from this sector by more than 50% in favor of a shift toward MT or post-editing workflows. At the same time, we highlighted the fact that AI would enable more enterprise groups to obtain uncontrolled AI translation for a fraction of the cost of traditional localization teams, all while enabling a massive increase in terms of content generated. We also predicted that, after a delay we would see a convergence of spoken and written services as enterprises seek to convert spoken interaction into a durable asset. The net result is that language companies must reinvent themselves in terms of the problems they solve, not the effort of translation. Since the first edition of this report in 2021 it has gone on to be common framing for industry conditions, even among those who disagree with some or all of it.</p>"
 		},
 		{
 			"id": "csa-2023-language-services-market-2023",
@@ -2692,7 +2696,9 @@
 			"abstract": "Machine translation (MT) is on the cusp of yet another revolution as increasingly sophisticated neural engines that can adapt themselves to content and metadata will usher in the era of “responsive machine translation.” This report presents an overview of this developing technology and explains how enterprises, language service providers, and MT developers alike can prepare for it. It covers the technical components as well as the business- and content-related metadata that will enable it. The report also lays out the conditions for the next step in MT innovation – responsible machine translation – that will meet the “confidence-proof test” needed for MT to meet and exceed expectations for an ever-growing array of scenarios.",
 			"url": "https://insights.csa-research.com/aim/en/reports/305013336",
 			"visible": true,
-			"provenance": "csa_reports.xlsx"
+			"provenance": "csa_reports.xlsx",
+			"preferred_order": 3,
+			"significance": "<p>In my 2021 keynote at the online MT Summit, I introduced the concept of <strong>responsive machine translation</strong>. I pointed out that MT had been undergoing a long-term evolution from monolithic and inflexible systems to easily trained neural MT systems. I called for the next step, which would be to make NMT aware of context and metadata so that it could adapt to style, audience, and other features of communication. The presentation called for researchers to make this vision a reality and for them to look further ahead to <strong>responsible MT</strong> that would reflect ethical, legal, and governance concerns adn notify users if it cannot provide an adequate translation.</p><p>All of these things have largely happened since then, but not from NMT. Instead, LLMs have delivered the flexibility and features of responsive MT, although work remains for them to be truly responsible.</p>"
 		},
 		{
 			"id": "csa-2021-responsive-mt",
@@ -5920,8 +5926,9 @@
 			"url": null,
 			"citation": "Lommel, Arle. 2016. Blues for BLEU: Reconsidering the validity of reference-based MT evaluation. <em>Proceedings of the lrec 2016 Workshop “Translation Evaluation – From Fragmented Tools and Data Sets to an Integrated Ecosystem”</em>, ed. by Georg Rehm, Aljoscha Burchardt et al.",
 			"visible": true,
-			"provenance": "manual"
+			"provenance": "manual",
+			"preferred_order": 4,
+			"significance": "<p>This research paper argued against prevailing practices in machine translation development that focused on ekeing out marginal gains in scores from reference-based quality evaluation methods. It pointed out that scores were highly variable and manipulable simply by changing the number of references or switching reference translations. Because BLEU and similar methods are not semantically aware, they cannot account for language variation. I demonstrated these problems empirically by generated BLEU scores for three MT systems against every combination of 12 different English→Chinese reference translations of new data. Simply increasing the number of refrence translations resulted in dramatic increases in BLEU score, with even the 12th reference adding to them. I also tested the references against themselves in a similar fashion, and found that – as measured by BLEU – MT systems had already passed human parity, an assertion that was clearly untrue. I then using a Monte Carlo-type methodology in which I compared random halves of translations against their other half to measure the difference in BLEU score, which found that scores, even within a single translation, were often significantly different. Although human evaluation is expensive and time-consuming, it is clear that reference-based methods are not a valid alternative.</p><p>Needless to say, this paper was not popular in the MT research community…</p>"
 		}
-
 	]
 }
