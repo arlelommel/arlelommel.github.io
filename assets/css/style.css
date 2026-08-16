@@ -1,496 +1,576 @@
+@font-face {
+	font-family: "EB Garamond";
+	src: url("/assets/web-fonts/eb-garamond-regular.woff") format("woff");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "EB Garamond";
+	src: url("/assets/web-fonts/eb-garamond-italic.woff") format("woff");
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "EB Garamond";
+	src: url("/assets/web-fonts/eb-garamond-medium.woff") format("woff");
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "EB Garamond";
+	src: url("/assets/web-fonts/eb-garamond-medium-italic.woff") format("woff");
+	font-style: italic;
+	font-weight: 500;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "EB Garamond";
+	src: url("/assets/web-fonts/eb-garamond-semibold.woff") format("woff");
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "EB Garamond";
+	src: url("/assets/web-fonts/eb-garamond-semibold-italic.woff") format("woff");
+	font-style: italic;
+	font-weight: 600;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "EB Garamond";
+	src: url("/assets/web-fonts/eb-garamond-bold.woff") format("woff");
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "EB Garamond";
+	src: url("/assets/web-fonts/eb-garamond-bold-italic.woff") format("woff");
+	font-style: italic;
+	font-weight: 700;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "EB Garamond";
+	src: url("/assets/web-fonts/eb-garamond-extrabold.woff") format("woff");
+	font-style: normal;
+	font-weight: 800;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "EB Garamond";
+	src: url("/assets/web-fonts/eb-garamond-extrabold-italic.woff") format("woff");
+	font-style: italic;
+	font-weight: 800;
+	font-display: swap;
+}
+
 :root {
-  /* Design tokens: change these to alter the site's global visual system. */
-  --background: #fffef6;
-  --text-primary: #534042;
-  --text-secondary: #65505b;
-  --accent: #6c8fc7;
-  --rule: #c7d2e8;
+	/* Design tokens: change these to alter the site's global visual system. */
+	--background: #fffef6;
+	--text-primary: #534042;
+	--text-secondary: #65505b;
+	--accent: #6c8fc7;
+	--rule: #c7d2e8;
 
-  /* Reusable borders. */
-  --rule-standard: 1px solid var(--rule);
-  --imgframe: var(--rule-standard);
+	/* Reusable borders. */
+	--rule-standard: 1px solid var(--rule);
+	--imgframe: var(--rule-standard);
 
-  /* Type families. */
-  --serif: "EB Garamond", Garamond, "Times New Roman", serif;
-  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+	/* Type families. */
+	--serif: "EB Garamond", Garamond, "Times New Roman", serif;
+	--sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 
-  /* Layout widths. */
-  --shell: 72rem;   /* Maximum width of main page content. */
-  --measure: 44rem; /* Comfortable maximum width for long prose. */
+	/* Layout widths. */
+	--shell: 72rem;	 /* Maximum width of main page content. */
+	--measure: 44rem; /* Comfortable maximum width for long prose. */
 
-  /* Small UI geometry. */
-  --radius: 0.25rem;
+	/* Small UI geometry. */
+	--radius: 0.25rem;
 }
 
 /* --------------------------------------------------------------------------
-   Global reset and document defaults
-   -------------------------------------------------------------------------- */
+	 Global reset and document defaults
+	 -------------------------------------------------------------------------- */
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  background: var(--background);
-  color: var(--text-primary);
-  font-family: var(--serif);
-  font-size: 1.125rem;
-  line-height: 1.55;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  font-kerning: normal;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  font-feature-settings: "liga" 1, "kern" 1;
+	margin: 0;
+	background: var(--background);
+	color: var(--text-primary);
+	font-family: var(--serif);
+	font-size: 1.125rem;
+	line-height: 1.55;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	font-kerning: normal;
+	font-variant-numeric: oldstyle-nums proportional-nums;
+	font-feature-settings: "liga" 1, "kern" 1, "onum" 1, "pnum" 1;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+	max-width: 100%;
+	height: auto;
+	display: block;
 }
 
 a {
-  color: var(--accent);
-  text-decoration-thickness: 0.07em;
-  text-underline-offset: 0.15em;
+	color: var(--accent);
+	text-decoration-thickness: 0.07em;
+	text-underline-offset: 0.15em;
 }
 
 a:hover,
 a:focus-visible {
-  text-decoration-thickness: 0.11em;
+	text-decoration-thickness: 0.11em;
 }
 
 /* Main centered content container used throughout the site. */
 .shell {
-  width: min(calc(100% - 2.5rem), var(--shell));
-  margin-inline: auto;
+	width: min(calc(100% - 2.5rem), var(--shell));
+	margin-inline: auto;
 }
 
 /* --------------------------------------------------------------------------
-   Header and navigation
-   -------------------------------------------------------------------------- */
+	 Header and navigation
+	 -------------------------------------------------------------------------- */
 
 .site-header {
-  border-bottom: var(--rule-standard);
+	border-bottom: var(--rule-standard);
 }
 
 .nav-wrap {
-  min-height: 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+	min-height: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2rem;
 }
 
 .site-name {
-  color: var(--text-primary);
-  font-size: 1.45rem;
-  font-weight: 600;
-  text-decoration: none;
+	color: var(--text-primary);
+	font-size: 1.45rem;
+	font-weight: 600;
+	text-decoration: none;
 }
 
 .site-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.4rem;
-  font-family: var(--sans);
-  font-size: 0.86rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.4rem;
+	font-family: var(--sans);
+	font-size: 0.86rem;
+	font-weight: 600;
+	letter-spacing: 0.02em;
 }
 
 .site-nav a {
-  color: var(--text-secondary);
-  text-decoration: none;
+	color: var(--text-secondary);
+	text-decoration: none;
 }
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
-  color: var(--accent);
+	color: var(--accent);
 }
 
 /* --------------------------------------------------------------------------
-   Hero
-   -------------------------------------------------------------------------- */
+	 Hero
+	 -------------------------------------------------------------------------- */
 
 .hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1.8fr) minmax(14rem, 0.8fr);
-  gap: clamp(3rem, 8vw, 7rem);
-  align-items: center;
-  padding-block: clamp(5rem, 10vw, 9rem);
+	display: grid;
+	grid-template-columns: minmax(0, 1.8fr) minmax(14rem, 0.8fr);
+	gap: clamp(3rem, 8vw, 7rem);
+	align-items: center;
+	padding-block: clamp(5rem, 10vw, 9rem);
 }
 
 .hero-copy {
-  max-width: 49rem;
+	max-width: 49rem;
 }
 
 /* Small uppercase labels use the sans-serif companion face. */
 .eyebrow {
-  margin: 0 0 1rem;
-  color: var(--text-secondary);
-  font-family: var(--sans);
-  font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 0.11em;
-  line-height: 1.35;
-  text-transform: uppercase;
+	margin: 0 0 1rem;
+	color: var(--text-secondary);
+	font-family: var(--sans);
+	font-size: 0.76rem;
+	font-weight: 700;
+	letter-spacing: 0.11em;
+	line-height: 1.35;
+	text-transform: uppercase;
 }
 
 h1,
 h2,
 h3 {
-  margin-top: 0;
-  color: var(--text-primary);
-  font-family: var(--serif);
-  font-weight: 500;
-  letter-spacing: -0.012em;
+	margin-top: 0;
+	color: var(--text-primary);
+	font-family: var(--serif);
+	font-weight: 500;
+	letter-spacing: -0.012em;
 }
 
 /*
-  Main display heading.
-  clamp(minimum, fluid viewport size, maximum) keeps it responsive.
-  The 1.3 line-height is intentional for EB Garamond's tall ascenders and descenders.
+	Main display heading.
+	clamp(minimum, fluid viewport size, maximum) keeps it responsive.
+	The 1.3 line-height is intentional for EB Garamond's tall ascenders and descenders.
 */
 h1 {
-  max-width: 16ch;
-  margin-bottom: 1.5rem;
-  font-size: clamp(2rem, 4vw, 4rem);
-  line-height: 1.3;
+	max-width: 16ch;
+	margin-bottom: 1.5rem;
+	font-size: clamp(2rem, 4vw, 4rem);
+	line-height: 1.3;
 }
 
 h2 {
-  margin-bottom: 1.25rem;
-  font-size: clamp(2rem, 3.5vw, 3.2rem);
-  line-height: 1.15;
+	margin-bottom: 1.25rem;
+	font-size: clamp(2rem, 3.5vw, 3.2rem);
+	line-height: 1.15;
 }
 
 h3 {
-  margin-bottom: 0.7rem;
-  font-size: 1.65rem;
-  line-height: 1.2;
+	margin-bottom: 0.7rem;
+	font-size: 1.65rem;
+	line-height: 1.2;
 }
 
 .lede {
-  max-width: 42rem;
-  margin: 0;
-  color: var(--text-secondary);
-  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
-  line-height: 1.42;
+	max-width: 42rem;
+	margin: 0;
+	color: var(--text-secondary);
+	font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+	line-height: 1.42;
 }
 
 .hero-actions {
-  display: flex;
-  align-items: center;
-  gap: 1.4rem;
-  margin-top: 2.2rem;
-  font-family: var(--sans);
-  font-size: 0.9rem;
-  font-weight: 650;
+	display: flex;
+	align-items: center;
+	gap: 1.4rem;
+	margin-top: 2.2rem;
+	font-family: var(--sans);
+	font-size: 0.9rem;
+	font-weight: 650;
 }
 
 .button {
-  display: inline-block;
-  padding: 0.8rem 1.05rem;
-  border: 1px solid var(--accent);
-  border-radius: var(--radius);
-  text-decoration: none;
+	display: inline-block;
+	padding: 0.8rem 1.05rem;
+	border: 1px solid var(--accent);
+	border-radius: var(--radius);
+	text-decoration: none;
 }
 
 .button-primary {
-  background: var(--accent);
-  color: var(--background);
+	background: var(--accent);
+	color: var(--background);
 }
 
 .button-primary:hover,
 .button-primary:focus-visible {
-  opacity: 0.9;
+	opacity: 0.9;
 }
 
 .text-link {
-  font-family: var(--sans);
-  font-size: 0.9rem;
-  font-weight: 650;
-  text-decoration: none;
+	font-family: var(--sans);
+	font-size: 0.9rem;
+	font-weight: 650;
+	text-decoration: none;
 }
 
 /* Portrait treatment: deliberately simple, with only a fine rule. */
 .hero-image {
-  justify-self: end;
-  width: min(100%, 19rem);
+	justify-self: end;
+	width: min(100%, 19rem);
 }
 
 .hero-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border: var(--imgframe);
+	width: 100%;
+	height: auto;
+	display: block;
+	border: var(--imgframe);
 }
 
 /* Temporary image placeholder. */
 .image-placeholder {
-  aspect-ratio: 4 / 5;
-  display: grid;
-  place-items: center;
-  border: var(--rule-standard);
-  color: var(--text-secondary);
-  font-family: var(--sans);
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+	aspect-ratio: 4 / 5;
+	display: grid;
+	place-items: center;
+	border: var(--rule-standard);
+	color: var(--text-secondary);
+	font-family: var(--sans);
+	font-size: 0.8rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
 }
 
 /* --------------------------------------------------------------------------
-   General sections
-   -------------------------------------------------------------------------- */
+	 General sections
+	 -------------------------------------------------------------------------- */
 
 .section {
-  padding-block: clamp(4rem, 8vw, 7rem);
+	padding-block: clamp(4rem, 8vw, 7rem);
 }
 
 .section-rule {
-  border-top: var(--rule-standard);
+	border-top: var(--rule-standard);
 }
 
 .section-heading {
-  max-width: 48rem;
-  margin-bottom: 3rem;
+	max-width: 48rem;
+	margin-bottom: 3rem;
 }
 
 /* --------------------------------------------------------------------------
-   "What I work on" grid
-   -------------------------------------------------------------------------- */
+	 "What I work on" grid
+	 -------------------------------------------------------------------------- */
 
 .work-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  border-top: var(--rule-standard);
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	border-top: var(--rule-standard);
 }
 
 .work-item {
-  padding: 2.2rem 2.2rem 2.4rem 0;
-  border-bottom: var(--rule-standard);
+	padding: 2.2rem 2.2rem 2.4rem 0;
+	border-bottom: var(--rule-standard);
 }
 
 .work-item:nth-child(odd) {
-  padding-right: 3rem;
-  border-right: var(--rule-standard);
+	padding-right: 3rem;
+	border-right: var(--rule-standard);
 }
 
 .work-item:nth-child(even) {
-  padding-left: 3rem;
+	padding-left: 3rem;
 }
 
 .work-item p {
-  max-width: 31rem;
-  margin: 0 0 1.2rem;
-  color: var(--text-secondary);
+	max-width: 31rem;
+	margin: 0 0 1.2rem;
+	color: var(--text-secondary);
 }
 
 /* --------------------------------------------------------------------------
-   Two-column content sections
-   -------------------------------------------------------------------------- */
+	 Two-column content sections
+	 -------------------------------------------------------------------------- */
 
 .two-column {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: clamp(3rem, 8vw, 7rem);
+	display: grid;
+	grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+	gap: clamp(3rem, 8vw, 7rem);
 }
 
 .prose {
-  max-width: var(--measure);
+	max-width: var(--measure);
 }
 
 .prose p {
-  margin-top: 0;
+	margin-top: 0;
 }
 
 .prose p + p {
-  margin-top: 1.15rem;
+	margin-top: 1.15rem;
 }
 
 /* --------------------------------------------------------------------------
-   Current-role logos
-   -------------------------------------------------------------------------- */
+	 Current-role logos
+	 -------------------------------------------------------------------------- */
 
 /*
-  Both roles share a fixed-width logo column so their text aligns.
-  Individual logos are sized independently for optical balance.
+	Both roles share a fixed-width logo column so their text aligns.
+	Individual logos are sized independently for optical balance.
 */
 .current-role {
-  display: grid;
-  grid-template-columns: 8rem 1fr;
-  column-gap: 1.4rem;
-  align-items: center;
+	display: grid;
+	grid-template-columns: 8rem 1fr;
+	column-gap: 1.4rem;
+	align-items: center;
 }
 
 .current-role + .current-role {
-  margin-top: 2.25rem;
+	margin-top: 2.25rem;
 }
 
 .current-role p {
-  margin: 0;
+	margin: 0;
 }
 
 /* Centers each differently proportioned logo within the shared column. */
 .role-logo-wrap {
-  width: 8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	width: 8rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .role-logo-wrap a {
-  display: block;
+	display: block;
 }
 
 /* Do NOT set a generic width here. */
 .role-logo-img {
-  display: block;
-  height: auto;
+	display: block;
+	height: auto;
 }
 
 /* Wide, low-mass CSA mark needs considerably more width. */
 .role-logo-img.csa-logo {
-  width: 7.75rem;
-  max-width: 7.75rem;
+	width: 7.75rem;
+	max-width: 7.75rem;
 }
 
 /* Dense MQM owl needs substantially less width. */
 .role-logo-img.mqm-logo {
-  width: 2.75rem;
-  max-width: 2.75rem;
+	width: 2.75rem;
+	max-width: 2.75rem;
 }
 
 /* --------------------------------------------------------------------------
-   Selected-work list
-   -------------------------------------------------------------------------- */
+	 Selected-work list
+	 -------------------------------------------------------------------------- */
 
 .selected-list {
-  border-top: var(--rule-standard);
+	border-top: var(--rule-standard);
 }
 
 .selected-list a {
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-  padding: 1.15rem 0;
-  border-bottom: var(--rule-standard);
-  color: var(--text-primary);
-  font-size: 1.3rem;
-  text-decoration: none;
+	display: flex;
+	justify-content: space-between;
+	gap: 2rem;
+	padding: 1.15rem 0;
+	border-bottom: var(--rule-standard);
+	color: var(--text-primary);
+	font-size: 1.3rem;
+	text-decoration: none;
 }
 
 .selected-list a:hover,
 .selected-list a:focus-visible {
-  color: var(--accent);
+	color: var(--accent);
 }
 
 /* --------------------------------------------------------------------------
-   Footer
-   -------------------------------------------------------------------------- */
+	 Footer
+	 -------------------------------------------------------------------------- */
 
 .site-footer {
-  border-top: var(--rule-standard);
+	border-top: var(--rule-standard);
 }
 
 .footer-wrap {
-  min-height: 6rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  color: var(--text-secondary);
-  font-family: var(--sans);
-  font-size: 0.78rem;
+	min-height: 6rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 2rem;
+	color: var(--text-secondary);
+	font-family: var(--sans);
+	font-size: 0.78rem;
 }
 
 .footer-wrap p {
-  margin: 0;
+	margin: 0;
 }
 
 .footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
 }
 
 .footer-links a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 /* --------------------------------------------------------------------------
-   Responsive layout
-   -------------------------------------------------------------------------- */
+	 Responsive layout
+	 -------------------------------------------------------------------------- */
 
 /* Tablet / narrow desktop: stack major multi-column layouts. */
 @media (max-width: 800px) {
-  .nav-wrap {
-    padding-block: 1.25rem;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 0.8rem;
-  }
+	.nav-wrap {
+		padding-block: 1.25rem;
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 0.8rem;
+	}
 
-  .site-nav {
-    gap: 0.8rem 1.1rem;
-  }
+	.site-nav {
+		gap: 0.8rem 1.1rem;
+	}
 
-  .hero {
-    grid-template-columns: 1fr;
-    padding-block: 4rem;
-  }
+	.hero {
+		grid-template-columns: 1fr;
+		padding-block: 4rem;
+	}
 
-  .hero-image {
-    justify-self: start;
-    width: min(70vw, 17rem);
-  }
+	.hero-image {
+		justify-self: start;
+		width: min(70vw, 17rem);
+	}
 
-  .work-grid,
-  .two-column {
-    grid-template-columns: 1fr;
-  }
+	.work-grid,
+	.two-column {
+		grid-template-columns: 1fr;
+	}
 
-  .work-item,
-  .work-item:nth-child(odd),
-  .work-item:nth-child(even) {
-    padding: 1.8rem 0 2rem;
-    border-right: 0;
-  }
+	.work-item,
+	.work-item:nth-child(odd),
+	.work-item:nth-child(even) {
+		padding: 1.8rem 0 2rem;
+		border-right: 0;
+	}
 
-  .footer-wrap {
-    padding-block: 1.5rem;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 0.8rem;
-  }
+	.footer-wrap {
+		padding-block: 1.5rem;
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 0.8rem;
+	}
 }
 
 /* Phone: reduce base type and page gutters. */
 @media (max-width: 520px) {
-  body {
-    font-size: 1.04rem;
-  }
+	body {
+		font-size: 1.04rem;
+	}
 
-  .shell {
-    width: min(calc(100% - 1.5rem), var(--shell));
-  }
+	.shell {
+		width: min(calc(100% - 1.5rem), var(--shell));
+	}
 
-  .hero-actions {
-    align-items: flex-start;
-    flex-direction: column;
-  }
+	.hero-actions {
+		align-items: flex-start;
+		flex-direction: column;
+	}
 
-  .selected-list a {
-    font-size: 1.15rem;
-  }
+	.selected-list a {
+		font-size: 1.15rem;
+	}
 }
 
 /* Styling for navigation marking */
