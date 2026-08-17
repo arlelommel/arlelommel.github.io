@@ -375,3 +375,7 @@
 		display: none;
 	}
 }
+
+.resume_contact-links {
+	white-space: nowrap;
+}
