@@ -276,7 +276,9 @@
 }
 
 @media (max-width: 620px) {
-	.about-section-nav ul { display: block; }
+	.about-section-nav ul {
+		display: block;
+	}
 
 	.about-section-nav a,
 	.about-section-nav li + li a {
@@ -284,26 +286,38 @@
 		border-left: 0;
 	}
 
-	.about-section-nav li + li { border-top: var(--rule-standard); }
+	.about-section-nav li + li {
+		border-top: var(--rule-standard);
+	}
 
 	.about-gallery--three,
 	.about-gallery--mosaic,
 	.about-gallery--strip,
 	.about-gallery--landscape {
-		grid-template-columns: 1fr;
+		grid-template-columns: minmax(0, 1fr);
 	}
 
-	.about-gallery--three .about-gallery-item,
+	/* Explicitly undo the desktop placement of music-gallery items. */
+	.about-gallery--three .about-gallery-item:nth-child(1),
+	.about-gallery--three .about-gallery-item:nth-child(3),
+	.about-gallery--three .about-gallery-item:nth-child(4),
 	.about-gallery--three .about-gallery-item--video {
-		grid-column: auto;
+		grid-column: 1;
 		grid-row: auto;
 	}
 
-	.about-gallery--mosaic .about-gallery-item--wide { grid-column: auto; }
+	.about-gallery--mosaic .about-gallery-item--wide {
+		grid-column: auto;
+	}
 
-	.about-gallery-item--hero .about-image-placeholder {
-		height: auto;
-		aspect-ratio: 4 / 3;
-		min-height: 10rem;
+	.about-gallery-item {
+		width: 100%;
+		min-width: 0;
+	}
+
+	.about-gallery-item img,
+	.about-video {
+		width: 100%;
+		max-width: 100%;
 	}
 }
