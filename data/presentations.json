@@ -6,6 +6,38 @@
 	],
 	"records": [
 		{
+			"id": "state-of-the-nation",
+			"doi": null,
+			"title": "The State of the Nation - Localization",
+			"subtitle": null,
+			"display_title": "",
+			"type": "webinar",
+			"source": "CSA Research",
+			"authors": "Dr. Arle Lommel",
+			"date": "2026-05-27",
+			"year": 2026,
+			"abstract": "I was part of a panel discussion about where localization is headed in the age of AI along with Simon Hodgins (Vistatec) and Alex Zekakis (XTM)",
+			"url": "https://www.linkedin.com/feed/update/urn:li:activity:7460003403688222720/",
+			"visible": true,
+			"provenance": "manual"
+		},
+		{
+			"id": "role-of-standards",
+			"doi": null,
+			"title": "The role of standards in strengthening the language sector globally",
+			"subtitle": null,
+			"display_title": "The role of standards in strengthening the language sector globally",
+			"type": "webinar",
+			"source": "CSA Research",
+			"authors": "Dr. Arle Lommel",
+			"date": "2026-06-16",
+			"year": 2026,
+			"abstract": null,
+			"url": "My presentation covered how localization standards have evolved over time, how COVID and AI have affected them, and what needs to happen to revialize interest and standards",
+			"visible": true,
+			"provenance": "manual"
+		},
+		{
 			"id": "csa-2026-monthly-discussion-session-on-ai-in-language-services-july-2026",
 			"doi": null,
 			"title": "Monthly discussion session on AI in language services (July 2026)",
