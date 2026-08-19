@@ -38,23 +38,25 @@
 			"provenance": "manual"
 		},
 		{
-			"id": "csa-2026-monthly-discussion-session-on-ai-in-language-services-july-2026",
+			"id": "main-monthly-ai",
+			"series_title": "Monthly discussion sessions on the role of AI in language services",
 			"doi": null,
 			"title": "Monthly discussion session on AI in language services (July 2026)",
 			"subtitle": "An interactive Q&A discussion about how current developments impact translation and localization",
 			"display_title": "Monthly discussion session on AI in language services (July 2026): An interactive Q&A discussion about how current developments impact translation and localization",
+			"abstract": "In this series, I answer questions from CSA Research clients about GenAI and how it affects the language sector. Questions range from strategic to highly technical and include questions presubmitted as well as asked on the spot",
 			"type": "webinar",
 			"source": "CSA Research",
 			"authors": "Dr. Arle Lommel",
-			"date": "2026-08-03",
+			"date": "2026-07-03",
 			"year": 2026,
-			"abstract": null,
-			"url": "https://insights.csa-research.com/aim/en/reports/305013869",
+			"url": null,
 			"visible": true,
 			"provenance": "csa_reports.xlsx"
 		},
 		{
 			"id": "csa-2026-monthly-discussion-session-on-ai-in-language-services-june-2026",
+			"series_parent": "main-monthly-ai",
 			"doi": null,
 			"title": "Monthly discussion session on AI in language services (June 2026)",
 			"subtitle": "An interactive Q&A discussion about how current developments impact translation and localization",
@@ -62,7 +64,7 @@
 			"type": "webinar",
 			"source": "CSA Research",
 			"authors": "Dr. Arle Lommel",
-			"date": "2026-07-03",
+			"date": "2026-07-30",
 			"year": 2026,
 			"abstract": null,
 			"url": "https://insights.csa-research.com/aim/en/reports/305013857",
@@ -71,6 +73,7 @@
 		},
 		{
 			"id": "csa-2026-monthly-discussion-session-on-ai-in-language-services-may-2026",
+			"series_parent": "main-monthly-ai",
 			"doi": null,
 			"title": "Monthly discussion session on AI in language services (May 2026)",
 			"subtitle": "An interactive Q&A discussion about how current developments impact translation and localization",
@@ -88,6 +91,7 @@
 		{
 			"id": "csa-2026-monthly-discussion-session-on-ai-in-language-services-april-2026",
 			"doi": null,
+			"series_parent": "main-monthly-ai",
 			"title": "Monthly discussion session on AI in language services (April 2026)",
 			"subtitle": "An interactive Q&A discussion about how current developments impact translation and localization",
 			"display_title": "Monthly discussion session on AI in language services (April 2026): An interactive Q&A discussion about how current developments impact translation and localization",
@@ -104,6 +108,7 @@
 		{
 			"id": "csa-2026-monthly-discussion-session-on-ai-in-language-services-march-2026",
 			"doi": null,
+			"series_parent": "main-monthly-ai",
 			"title": "Monthly discussion session on AI in language services (March 2026)",
 			"subtitle": "An interactive Q&A discussion about how current developments impact translation and localization",
 			"display_title": "Monthly discussion session on AI in language services (March 2026): An interactive Q&A discussion about how current developments impact translation and localization",
@@ -120,6 +125,7 @@
 		{
 			"id": "csa-2026-monthly-call-on-state-of-art-for-generative-ai-in-translation-february-2026",
 			"doi": null,
+			"series_parent": "main-monthly-ai",
 			"title": "Monthly call on the state of the art for generative AI in translation (February 2026)",
 			"subtitle": null,
 			"display_title": "Monthly call on the state of the art for generative AI in translation (February 2026)",
@@ -136,6 +142,7 @@
 		{
 			"id": "csa-2026-monthly-call-on-state-of-art-in-generative-ai-for-globalization-january-2026",
 			"doi": null,
+			"series_parent": "main-monthly-ai",
 			"title": "Monthly call on the state of the art in generative AI for globalization (January 2026)",
 			"subtitle": null,
 			"display_title": "Monthly call on the state of the art in generative AI for globalization (January 2026)",
@@ -184,6 +191,7 @@
 		{
 			"id": "csa-2025-monthly-discussion-session-on-ai-in-language-services-december-2025",
 			"doi": null,
+			"series_parent": "main-monthly-ai",
 			"title": "Monthly discussion session on AI in language services (December 2025)",
 			"subtitle": "State of the art in GenAI for translation",
 			"display_title": "Monthly discussion session on AI in language services (December 2025): State of the art in GenAI for translation",
@@ -200,6 +208,7 @@
 		{
 			"id": "csa-2025-monthly-discussion-session-on-ai-in-language-services-november-2025",
 			"doi": null,
+			"series_parent": "main-monthly-ai",
 			"title": "Monthly discussion session on AI in language services (November 2025)",
 			"subtitle": "An interactive Q&A discussion about how current developments impact translation and localization",
 			"display_title": "Monthly discussion session on AI in language services (November 2025): An interactive Q&A discussion about how current developments impact translation and localization",
@@ -216,6 +225,7 @@
 		{
 			"id": "csa-2025-monthly-discussion-session-on-ai-in-language-services-october-2025",
 			"doi": null,
+			"series_parent": "main-monthly-ai",
 			"title": "Monthly discussion session on AI in language services (October 2025)",
 			"subtitle": "An interactive Q&A discussion about how current developments impact translation and localization",
 			"display_title": "Monthly discussion session on AI in language services (October 2025): An interactive Q&A discussion about how current developments impact translation and localization",
@@ -232,6 +242,7 @@
 		{
 			"id": "csa-2025-monthly-discussion-session-on-ai-in-language-services-september-2025",
 			"doi": null,
+			"series_parent": "main-monthly-ai",
 			"title": "Monthly discussion session on AI in language services (September 2025)",
 			"subtitle": "An interactive Q&A discussion about how current developments impact translation and localization",
 			"display_title": "Monthly discussion session on AI in language services (September 2025): An interactive Q&A discussion about how current developments impact translation and localization",
@@ -248,6 +259,7 @@
 		{
 			"id": "csa-2025-monthly-discussion-session-on-ai-in-language-services-august-2025",
 			"doi": null,
+			"series_parent": "main-monthly-ai",
 			"title": "Monthly discussion session on AI in language services (August 2025)",
 			"subtitle": "An interactive Q&A discussion about how current developments impact translation and localization",
 			"display_title": "Monthly discussion session on AI in language services (August 2025): An interactive Q&A discussion about how current developments impact translation and localization",
@@ -264,6 +276,7 @@
 		{
 			"id": "csa-2025-monthly-discussion-session-on-ai-in-language-services-july-2025",
 			"doi": null,
+			"series_parent": "main-monthly-ai",
 			"title": "Monthly discussion session on AI in language services (July 2025)",
 			"subtitle": "An interactive Q&A discussion about how current developments impact translation and localization",
 			"display_title": "Monthly discussion session on AI in language services (July 2025): An interactive Q&A discussion about how current developments impact translation and localization",
@@ -280,6 +293,7 @@
 		{
 			"id": "csa-2025-monthly-discussion-session-on-ai-in-language-services-june-2025",
 			"doi": null,
+			"series_parent": "main-monthly-ai",
 			"title": "Monthly discussion session on AI in language services (June 2025)",
 			"subtitle": "An interactive Q&A discussion about how current developments impact translation and localization",
 			"display_title": "Monthly discussion session on AI in language services (June 2025): An interactive Q&A discussion about how current developments impact translation and localization",
@@ -296,6 +310,7 @@
 		{
 			"id": "csa-2025-monthly-discussion-session-on-ai-in-language-services-may-2025",
 			"doi": null,
+			"series_parent": "main-monthly-ai",
 			"title": "Monthly discussion session on AI in language services (May 2025)",
 			"subtitle": null,
 			"display_title": "Monthly discussion session on AI in language services (May 2025)",
@@ -312,6 +327,7 @@
 		{
 			"id": "csa-2025-monthly-discussion-session-on-ai-in-language-services-april-2025",
 			"doi": null,
+			"series_parent": "main-monthly-ai",
 			"title": "Monthly discussion session on AI in language services (April 2025)",
 			"subtitle": "An interactive Q&A discussion about how current developments impact translation and localization",
 			"display_title": "Monthly discussion session on AI in language services (April 2025): An interactive Q&A discussion about how current developments impact translation and localization",
@@ -328,6 +344,7 @@
 		{
 			"id": "csa-2025-monthly-discussion-session-on-ai-in-language-services-march-2025",
 			"doi": null,
+			"series_parent": "main-monthly-ai",
 			"title": "Monthly discussion session on AI in language services (March 2025)",
 			"subtitle": "An interactive Q&A discussion about how current developments impact translation and localization",
 			"display_title": "Monthly discussion session on AI in language services (March 2025): An interactive Q&A discussion about how current developments impact translation and localization",
@@ -344,6 +361,7 @@
 		{
 			"id": "csa-2025-monthly-ai-genai-discussion-call-february-2025",
 			"doi": null,
+			"series_parent": "main-monthly-ai",
 			"title": "Monthly AI/GenAI discussion call (February 2025)",
 			"subtitle": "An interactive Q&A discussion about how current developments impact translation and localization",
 			"display_title": "Monthly AI/GenAI discussion call (February 2025): An interactive Q&A discussion about how current developments impact translation and localization",
@@ -360,6 +378,7 @@
 		{
 			"id": "csa-2025-monthly-discussion-on-generative-ai-january-2025",
 			"doi": null,
+			"series_parent": "main-monthly-ai",
 			"title": "Monthly discussion on generative AI (January 2025)",
 			"subtitle": "An interactive Q&A discussion about how current developments impact translation and localization",
 			"display_title": "Monthly discussion on generative AI (January 2025): An interactive Q&A discussion about how current developments impact translation and localization",
@@ -376,6 +395,7 @@
 		{
 			"id": "csa-2024-monthly-ai-genai-discussion-call-december-2024",
 			"doi": null,
+			"series_parent": "main-monthly-ai",
 			"title": "Monthly AI/GenAI discussion call (December 2024)",
 			"subtitle": "Discussion session on the state of the art for AI and LLMs in the language sector",
 			"display_title": "Monthly AI/GenAI discussion call (December 2024): Discussion session on the state of the art for AI and LLMs in the language sector",
@@ -392,6 +412,7 @@
 		{
 			"id": "csa-2024-monthly-ai-genai-discussion-call-november-2024",
 			"doi": null,
+			"series_parent": "main-monthly-ai",
 			"title": "Monthly AI/GenAI discussion call (November 2024)",
 			"subtitle": "An interactive Q&A discussion about how current developments impact translation and localization",
 			"display_title": "Monthly AI/GenAI discussion call (November 2024): An interactive Q&A discussion about how current developments impact translation and localization",
@@ -408,6 +429,7 @@
 		{
 			"id": "csa-2024-monthly-ai-genai-discussion-call-october-2024",
 			"doi": null,
+			"series_parent": "main-monthly-ai",
 			"title": "Monthly AI/GenAI discussion call (October 2024)",
 			"subtitle": "Discussion session on the state of the art for LLMs in the language sector",
 			"display_title": "Monthly AI/GenAI discussion call (October 2024): Discussion session on the state of the art for LLMs in the language sector",
@@ -424,6 +446,7 @@
 		{
 			"id": "csa-2024-monthly-ai-genai-discussion-call-september-2024",
 			"doi": null,
+			"series_parent": "main-monthly-ai",
 			"title": "Monthly AI/GenAI discussion call (September 2024)",
 			"subtitle": "An interactive Q&A discussion about how current developments impact translation and localization",
 			"display_title": "Monthly AI/GenAI discussion call (September 2024): An interactive Q&A discussion about how current developments impact translation and localization",
@@ -456,6 +479,7 @@
 		{
 			"id": "csa-2024-monthly-ai-genai-discussion-call-august-2024",
 			"doi": null,
+			"series_parent": "main-monthly-ai",
 			"title": "Monthly AI/GenAI discussion call (August 2024)",
 			"subtitle": "An interactive Q&A discussion about how current developments impact translation and localization",
 			"display_title": "Monthly AI/GenAI discussion call (August 2024): An interactive Q&A discussion about how current developments impact translation and localization",
@@ -472,6 +496,7 @@
 		{
 			"id": "csa-2024-monthly-ai-genai-discussion-call-july-2024",
 			"doi": null,
+			"series_parent": "main-monthly-ai",
 			"title": "Monthly AI/GenAI discussion call (July 2024)",
 			"subtitle": "An interactive Q&A discussion about the state of the art with artificial intelligence",
 			"display_title": "Monthly AI/GenAI discussion call (July 2024): An interactive Q&A discussion about the state of the art with artificial intelligence",
@@ -488,6 +513,7 @@
 		{
 			"id": "csa-2024-monthly-ai-genai-discussion-call-june-2024",
 			"doi": null,
+			"series_parent": "main-monthly-ai",
 			"title": "Monthly AI/GenAI discussion call (June 2024)",
 			"subtitle": "An interactive Q&A discussion about the state of the art with artificial intelligence",
 			"display_title": "Monthly AI/GenAI discussion call (June 2024): An interactive Q&A discussion about the state of the art with artificial intelligence",
@@ -1423,6 +1449,24 @@
 			"citation": "July 1996. “Markedness effects in Welsh short plural forms,” presented at the annual meeting of the Linguistic Association of Canada and the United States (LACUS) in Provo, Utah. This presentation won the “Presidents’ Pre-Doctoral Prize” for the best paper presented by an individual who had not yet obtained a doctorate.",
 			"visible": true,
 			"provenance": "arleLommelCV-2024.idml",
+			"section": "Academic presentations"
+		},
+		{
+			"id": "panhispanic-symposium",
+			"doi": null,
+			"title": "The Emerging Role of Translators (and Interpreters) in the Post-Localization Era",
+			"subtitle": null,
+			"display_title": "Invited Presentation: The Emerging Role of Translators (and Interpreters) in the Post-Localization Era",
+			"type": "presentation",
+			"source": "Academic / professional record",
+			"authors": null,
+			"date": "2025-11-29",
+			"year": 2025,
+			"abstract": null,
+			"url": null,
+			"citation": "The Emerging Role of Translators (and Interpreters) in the Post-Localization Era. Invited presentation at The Hispanic American Symposium on New Technologies, Localization and Specialized Translation, November 29, 2025 Buenos Aires",
+			"visible": true,
+			"provenance": "manual",
 			"section": "Academic presentations"
 		}
 	]

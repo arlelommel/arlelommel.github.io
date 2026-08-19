@@ -86,6 +86,123 @@
 
 	const visibleRecords = () => state.records.filter(record => record.visible !== false);
 
+	// Build lightweight presentation-series aggregates from direct series_parent links.
+	// Data contract: every member points directly to one canonical record; chains are invalid.
+	const preprocessSeries = records => {
+		const byId = new Map(records.map(record => [record.id, record]));
+		const membersByParent = new Map();
+		const malformed = new Set();
+
+		records.forEach(record => {
+			if (!record.series_parent) return;
+
+			const parentId = record.series_parent;
+			const parent = byId.get(parentId);
+
+			if (!record.id) {
+				console.warn('Presentation series member is missing an id and cannot be grouped.', record);
+				malformed.add(record);
+				return;
+			}
+
+			if (parentId === record.id) {
+				console.warn(`Presentation series record "${record.id}" points to itself as series_parent.`);
+				malformed.add(record);
+				return;
+			}
+
+			if (!parent) {
+				console.warn(`Presentation series record "${record.id}" points to missing parent "${parentId}".`);
+				malformed.add(record);
+				return;
+			}
+
+			if (parent.series_parent) {
+				console.warn(`Presentation series record "${record.id}" points to "${parentId}", which is itself a series member. series_parent must point directly to the canonical record.`);
+				malformed.add(record);
+				return;
+			}
+
+			if (!membersByParent.has(parentId)) {
+				membersByParent.set(parentId, []);
+			}
+
+			membersByParent.get(parentId).push(record);
+		});
+
+		const collapsedMemberIds = new Set();
+		const aggregates = new Map();
+
+		membersByParent.forEach((members, parentId) => {
+			const parent = byId.get(parentId);
+			const validMembers = members.filter(member => !malformed.has(member));
+			const instances = [parent, ...validMembers];
+			console.table(
+				instances.map(record => ({
+					id: record.id,
+					title: record.title,
+					date: record.date
+				}))
+			);
+
+			if (instances.length < 2) return;
+
+			validMembers.forEach(member => collapsedMemberIds.add(member.id));
+
+			const dated = instances
+				.filter(record => record.date)
+				.sort((a, b) => String(a.date).localeCompare(String(b.date)));
+
+			const oldest = dated[0] || parent;
+			const newest = dated[dated.length - 1] || parent;
+
+			const aggregate = {
+				...parent,
+				title: parent.series_title || parent.title,
+				display_title: parent.series_title || parent.display_title || parent.title,
+				year: newest.year || (newest.date ? Number(String(newest.date).slice(0, 4)) : parent.year),
+				date: newest.date || parent.date,
+				is_series: true,
+				series_count: instances.length,
+				series_oldest_date: oldest.date || null,
+				series_newest_date: newest.date || null,
+				series_members: instances
+			};
+
+			aggregates.set(parentId, aggregate);
+		});
+
+		return records
+			.filter(record => !collapsedMemberIds.has(record.id))
+			.map(record => aggregates.get(record.id) || record);
+	};
+
+	const formatMonthYear = value => {
+		if (!value) return '';
+
+		const date = new Date(`${value}T00:00:00`);
+		if (Number.isNaN(date.getTime())) return '';
+
+		return new Intl.DateTimeFormat('en', {
+			month: 'long',
+			year: 'numeric'
+		}).format(date);
+	};
+
+	const seriesDateRange = record => {
+		if (!record.is_series) return '';
+
+		const oldest = formatMonthYear(record.series_oldest_date);
+		const newest = formatMonthYear(record.series_newest_date);
+
+		if (!oldest && !newest) return '';
+		if (!oldest) return newest;
+		if (!newest) return oldest;
+		if (oldest === newest) return oldest;
+
+		return `${oldest} – ${newest}`;
+	};
+
 	const chronologicalSort = (a, b) => {
 		const yearDiff = Number(b.year || 0) - Number(a.year || 0);
 		if (yearDiff) return yearDiff;
@@ -119,7 +236,7 @@
 	};
 
 	const filteredRecords = () => {
-		let records = visibleRecords();
+		let records = preprocessSeries(visibleRecords());
 
 		if (state.filter !== 'all') {
 			records = records.filter(record => record.type === state.filter);
@@ -127,7 +244,11 @@
 
 		if (state.query) {
 			return records
-				.map(record => ({ record, score: searchScore(record, state.query) }))
+				.map(record => {
+					const members = record.is_series ? record.series_members : [record];
+					const score = Math.max(...members.map(member => searchScore(member, state.query)));
+					return { record, score };
+				})
 				.filter(item => item.score > 0)
 				.sort((a, b) => b.score - a.score || chronologicalSort(a.record, b.record))
 				.map(item => item.record);
@@ -140,25 +261,38 @@
 		const parts = [];
 		if (record.authors) parts.push(record.authors);
 		if (record.source) parts.push(record.source);
-		if (record.year) parts.push(record.year);
+
+		if (record.is_series) {
+			const range = seriesDateRange(record);
+			if (range) parts.push(range);
+			parts.push(`${record.series_count} instances in this series`);
+		} else if (record.year) {
+			parts.push(record.year);
+		}
+
 		if (record.type) parts.push(labelForType(record.type));
 		return parts.map(esc).join(' · ');
 	};
 
 	const renderRecord = record => {
-		const title = richText(record.display_title || record.title || 'Untitled');
+		const baseTitle = richText(record.display_title || record.title || 'Untitled');
+		const title = record.is_series ? `${baseTitle} <span class="pres_series-label">(series)</span>` : baseTitle;
 		const linkedTitle = record.url
 			? `<a href="${esc(record.url)}">${title}</a>`
 			: title;
 		const citation = record.citation
 			? `<p class="pres_record-citation">${richText(record.citation)}</p>`
 			: '';
-		const abstract = record.abstract
+		const abstractSource = record.is_series
+			? (record.series_members?.find(member => member.id === record.id)?.abstract || record.abstract)
+			: record.abstract;
+
+		const abstract = abstractSource
 			? `<div class="pres_record-abstract">
 				<button class="pres_disclosure pres_abstract-toggle" type="button" aria-expanded="false">Show description</button>
-				<div class="pres_abstract-text" hidden>${abstractHTML(record.abstract)}</div>
+				<div class="pres_abstract-text" hidden>${abstractHTML(abstractSource)}</div>
 			</div>`
-			: '';
+		: '';
 
 		return `
 			<article class="pres_record">
